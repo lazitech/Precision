@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Precision</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+  <title>
+        Precision
+    </title>
+    <style>
+      h1
+      {
+        display: block;
+        font-size: 7.2em;
+        margin-block-start: 0.67em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 500px;
+        font-weight: bold;
+        margin-top: 0;
+        margin-bottom: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        color: red;
+      }
+      p
+      {
+        color: red;
+        vertical-align: middle;
+        text-align:center;
+        font-size: 1.5em;
+        border-style: double;
+        width: fit-content;
+        border-color: black;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin:0 auto;
+      }
+      pp
+      {
+        color: black;
+        font-size: 14px;
+        border-color: black;
+        vertical-align: middle;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 50px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      hh
+      {
+        display: block;
+        font-size: 16px;
+        margin-block-start: 0.67em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+        margin-top: 0;
+        margin-bottom: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+      }
+      div
+      {
+        display: block;
+        font-size: 16px;
+        margin-block-start: 0.67em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+      }
+    </style>
+</head>
+
+<body>
+
+  <h1>
+    Precision
+  </h1>
+  <hh>
+                            你可以在下面的文本框中输入一个小数和精度,点击Enter会帮你找到一些与这个小数接近的代数数(用根式表示)或者超越数，其误差不会超过精度。
+  </hh>
+
+
+   
+      
+        <form id="form1">
+        <div>
+          <input name="input" type="text" maxlength="18" id="in1" placeholder="请输入数字" autocomplete="off" >
+        </div>
+        
+
+        <br/>
+        <div>
+          <input name="input" type="text" maxlength="18" id="in2" placeholder="请输入精度" autocomplete="off">
+        </div>
+           
+        <br/>  
+        <div>
+          <input type="submit" name="Button1" value="Enter" id="Button1" class="btn">
+        </div>
+        </form>
+
+
+
+        <script>
+          // Get a reference to the form so that we can set up an event handler
+          // for its submit event
+          var form = document.getElementById("Button1");
+          // Now, set up a submit event handler for the form
+          form.addEventListener("click", function(){
+            // Only when the form has been submitted do you want the textbox value
+            window.open("redirect.html");
+            var inputTest1 = document.getElementById('in1').value;
+            var inputTest2 = document.getElementById('in2').value;
+            var ss=inputTest1+'*'+inputTest2
+            localStorage.setItem( 'objectToPass', ss);
+            window.location = "NEW URL";   
+         
+          });
+        </script>
+
+        
+</body>
+
+</html>
